@@ -1,0 +1,246 @@
+/* General Styles */
+body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Pure white */
+    color: #333; /* Dark gray for readability */
+}
+
+h1, h2, h3, nav {
+    font-family: 'Inter', sans-serif; /* Modern & readable */
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: #1E3A5F;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.75rem 1.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    display: inline-block; /* This ensures the layout is consistent */
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+nav ul li a:visited {
+    color: #ffffff;
+}
+
+nav ul li a:active {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 0;
+        margin: 0 auto; /* Ensure it stays centered */
+        text-align: center;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem 0;
+}
+
+section {
+    background: none;
+    padding: 2rem;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+/* Paragraph Links */
+main p a {
+    color: #ec660c;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+main p a:hover {
+    text-decoration: underline;
+}
+
+main p a:visited {
+    color: #ec660c;
+}
+
+main p a:active {
+    color: #ec660c;
+    text-decoration: underline;
+}
+
+/* List Links */
+main ul li a, main ol li a {
+    color: #ec660c;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+main ul li a:hover, main ol li a:hover {
+    text-decoration: underline;
+}
+
+main ul li a:visited, main ol li a:visited {
+    color: #ec660c;
+}
+
+main ul li a:active, main ol li a:active {
+    color: #ec660c;
+    text-decoration: underline;
+}
+
+
+/* About content styles */
+.about-content {
+    display: flex;
+    flex-direction: row; /* Place text on the left, image on the right */
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.about-content .text-content {
+    flex: 1; /* Allow the text content to take up available space */
+}
+
+.about-content p {
+    margin-bottom: 1rem; /* Add some space between paragraphs */
+}
+
+.profile-picture {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+    margin-left: 1rem; /* Add some space between the text and the image */
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center; /* Center content on small screens */
+    }
+
+    .profile-picture {
+        width: 180px; /* Reduce size on small screens */
+        margin-top: 1rem;
+        margin-left: 0; /* Remove left margin on small screens */
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: #1E3A5F;
+    color: #ddd;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
